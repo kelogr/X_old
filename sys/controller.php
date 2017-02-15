@@ -2,12 +2,13 @@
 	namespace X\Sys;
 	/**
 	*
-	*   Controller: the base controller
-	*     in MVC systems
+	*   Controller: Es el controlador central del sistema MVC
 	*
-	*
+	*	@author: Kevin
+	*	@package: sysS
 	*
 	**/
+
 	class Controller{
 		protected $model;
 		protected $view;
@@ -15,6 +16,7 @@
 		function __construct($params){
 			$this->params=$params;
 		}
+		
 		function ajax($output){
 			ob_clean();
 			if(is_array($output)){

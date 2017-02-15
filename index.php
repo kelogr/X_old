@@ -8,6 +8,7 @@
 
 	use \X\Sys\Autoload;
 	use \X\Sys\Core;
+	use \X\Sys\Registry;
 
 	$loader=new Autoload();
 	$loader->register();
@@ -15,6 +16,9 @@
 	$loader->addNamespace('X\App','app');
 	$loader->addNamespace('X\App\Controllers','app/controllers');
 	$loader->addNamespace('X\App\Models','app/models');
-	$loader->addNamespace('X\App\Views','app/views');	
+	$loader->addNamespace('X\App\Views','app/views');
+	//crear registry
+
+	$config = new Registry();
 
 	Core::init();
